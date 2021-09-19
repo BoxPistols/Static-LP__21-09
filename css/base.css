@@ -1,0 +1,111 @@
+:root {
+  --color-text-p: #555;
+  --color-text-p-secondary: #666;
+  --color-text-h: #000;
+  --color-bg: #fff;
+  --color-bg-code: #f0f0f0;
+  --color-bg-footer: #f9f9f9;
+  --color-bg-strong: #fff996;
+  --color-bg-btn: #1976d2;
+  --color-text-a: #1976d2;
+  --color-text-a-hover: #1976d2;
+  --color-text-a-visited: #504080;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --primary: #0073df;
+  --font-sans: Helvetica Neue, Arial, Hiragino Sans, Hiragino Kaku Gothic ProN,
+    BIZ UDPGothic, Meiryo, sans-serif;
+}
+
+@supports (-webkit-touch-callout: none) and (font: -apple-system-body) {
+  :root {
+    font: -apple-system-body;
+  }
+}
+
+/* style reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  word-break: normal;
+  word-wrap: anywhere;
+  line-break: strict;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  box-sizing: initial;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  overflow: visible;
+  vertical-align: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + * {
+  margin-top: 0.8em;
+}
+
+nav ol,
+nav ul {
+  margin: 0;
+  list-style: none;
+}
