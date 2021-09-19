@@ -9,8 +9,8 @@
     color: #fff2;
     z-index: -1;
   }
-  
-h2 {
+
+  h2 {
     display: block;
     z-index: 2;
     color: white;
@@ -18,7 +18,7 @@ h2 {
 }
 
 .layout-catch {
-  opacity: .9;  
+  opacity: 0.9;
 }
 
 .section {
@@ -93,17 +93,17 @@ h3 {
     font-weight: 200;
     text-align: center;
   }
-  
-p {
+
+  p {
     color: black;
   }
-  
-.guide {
+
+  .guide {
     font-size: 1rem;
     text-align: left;
   }
-  
-.layout-links {
+
+  .layout-links {
     // background: #eee9;
     width: 100%;
     display: flex;
