@@ -430,5 +430,6 @@
    */
   // "editor.showUnused": true
   "editor.fontSize": 14,
+  "editor.lineHeight": 20,
   "editor.fontFamily": "メイリオ"
 }
