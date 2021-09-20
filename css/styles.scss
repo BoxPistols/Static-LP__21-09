@@ -1,43 +1,198 @@
-/* Product */
+// /* Product */
+// .title-area {
+//   .design-title {
+//     transform: rotate(-90deg);
+//     font-size: 8em;
+//     position: absolute;
+//     left: -1.5em;
+//     top: 2.5em;
+//     color: #fff2;
+//     z-index: -1;
+//   }
+
+//   h2 {
+//     display: block;
+//     z-index: 2;
+//     color: white;
+//   }
+// }
+
+// .layout-catch {
+//   opacity: 0.9;
+// }
+
+// .section {
+//   // min-height: 100vh;
+//   height: 100%;
+//   position: relative;
+//   background-color: #ccc;
+//   &__container {
+//     min-height: 90vh;
+//     padding: 20%;
+//     max-width: 1440px;
+//     margin: auto;
+//     position: relative;
+//     // left: 50%;
+//     // position: absolute;
+//     // top: 50%;
+//     // transform: translateX(-50%) translateY(-50%);
+//     z-index: 0;
+//   }
+//   p {
+//     // color: white;
+//     font-size: 1rem;
+//     letter-spacing: 1px;
+//     margin: 0;
+//   }
+// }
+
+// .not-section__container {
+//   position: relative;
+//   padding: 12%;
+//   max-width: 1440px;
+//   min-height: 80vh;
+//   z-index: 0;
+// }
+// // #first {
+// // background: dimgray;
+// // }
+// #second {
+//   background: orange;
+// }
+
+// #third {
+//   background: teal;
+// }
+// // ===== add cont
+// button {
+//   padding: 0.6em 2em;
+//   border-radius: 0.4em;
+//   background: none;
+//   outline: none;
+//   border: 1px solid #222;
+// }
+// h2,
+// h3 {
+//   margin: 1em 0;
+//   font-weight: 200;
+// }
+
+// h2 {
+//   font-size: 4rem;
+// }
+
+// h3 {
+//   font-size: 3rem;
+// }
+// #first.section {
+//   background-color: #fff;
+//   background-image: url('https://picsum.photos/1200/800/?image=309');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   h2 {
+//     font-weight: 200;
+//     text-align: center;
+//   }
+
+//   p {
+//     color: black;
+//   }
+
+//   .guide {
+//     font-size: 1rem;
+//     text-align: left;
+//   }
+
+//   .layout-links {
+//     // background: #eee9;
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-around;
+//     button {
+//       margin: 2em 0.85em;
+//       min-width: 12em;
+//     }
+//   }
+// }
+
+// ===== Basic
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: YakuHanMP, 'Hiragino Mincho ProN', 'Noto Serif JP', 'Yu Mincho',
+    YuMincho, serif;
+  min-height: 100vh;
+  color: #111;
+  font-weight: 400;
+}
+
+.fx {
+  display: flex;
+  // &.right {
+  //   align-items: end;
+  // }
+}
+.to-top {
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: white;
+    border: 1px solid #999;
+    // padding: 12px;
+    text-decoration: none;
+    border-radius: 50%;
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: #fff2;
+  }
+}
+
 .title-area {
   .design-title {
-    transform: rotate(-90deg);
     font-size: 8em;
     position: absolute;
-    left: -1.5em;
-    top: 2.5em;
+    left: 10%;
+    top: 5%;
     color: #fff2;
     z-index: -1;
   }
-
   h2 {
     display: block;
     z-index: 2;
     color: white;
   }
 }
-
 .layout-catch {
-  opacity: 0.9;
+  opacity: 0;
+  animation-name: textFadeOn;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
 }
-
 .section {
-  // min-height: 100vh;
-  height: 100%;
   position: relative;
   background-color: #ccc;
+
   &__container {
     min-height: 90vh;
     padding: 20%;
     max-width: 1440px;
     margin: auto;
     position: relative;
+
     // left: 50%;
     // position: absolute;
     // top: 50%;
     // transform: translateX(-50%) translateY(-50%);
     z-index: 0;
   }
+
   p {
     // color: white;
     font-size: 1rem;
@@ -45,25 +200,113 @@
     margin: 0;
   }
 }
-
 .not-section__container {
   position: relative;
   padding: 12%;
   max-width: 1440px;
   min-height: 80vh;
+  margin: auto;
   z-index: 0;
 }
 // #first {
-// background: dimgray;
+//   background: dimgray;
 // }
 #second {
   background: orange;
 }
-
 #third {
   background: teal;
 }
+
+.obs {
+  .ob_target {
+    opacity: 0;
+    width: 100%;
+  }
+  &.fadeOn {
+    &.active .ob_target {
+      animation-name: textFadeOn;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+    }
+  }
+  &.fadeOff {
+    &.active .ob_target {
+      animation-name: textFadeOff;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+    }
+  }
+  &.r2l {
+    &.active .ob_target {
+      animation-name: textFadeInR2L;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+
+      &.right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: end;
+      }
+    }
+  }
+
+  &.active {
+    .ob_target {
+      //textFadeInR2L
+      animation-name: textFadeIn;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes textFadeOn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes textFadeOff {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes textFadeInR2L {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 // ===== add cont
+
 button {
   padding: 0.6em 2em;
   border-radius: 0.4em;
@@ -71,43 +314,41 @@ button {
   outline: none;
   border: 1px solid #222;
 }
+
 h2,
 h3 {
   margin: 1em 0;
   font-weight: 200;
 }
-
 h2 {
   font-size: 4rem;
 }
-
 h3 {
   font-size: 3rem;
 }
+
 #first.section {
   background-color: #fff;
-  background-image: url('https://picsum.photos/1200/800/?image=309');
+  background-image: url(https://picsum.photos/1200/800/?image=309);
   background-repeat: no-repeat;
   background-size: cover;
   h2 {
     font-weight: 200;
     text-align: center;
   }
-
   p {
     color: black;
   }
-
   .guide {
     font-size: 1rem;
     text-align: left;
   }
-
   .layout-links {
     // background: #eee9;
     width: 100%;
     display: flex;
     justify-content: space-around;
+
     button {
       margin: 2em 0.85em;
       min-width: 12em;
