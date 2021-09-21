@@ -95,8 +95,8 @@ body {
   margin: 0 auto;
   display: block;
   padding: 32px;
-  background-color: pink;
-  /* FIXME */
+  /* FIXME guide */
+  background-color: #abc;
 }
 
 /* === Section Hero === */
@@ -155,6 +155,7 @@ body {
 
   margin: 2em auto 0;
   max-width: var(--inner-width);
+  padding: 0 2vw;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -163,27 +164,14 @@ body {
   margin: 4rem 0.85em;
 }
 
-/* === Section Info === */
+/* === Section Common === */
 
-#info-top > .container {
-  /* background-color: bisque; */
-  background-color: #cde;
+.section > .container {
   padding: 4rem 0 8rem;
   z-index: 1;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
-#info-top > .container > .info-group {
-  position: relative;
-  max-width: var(--inner-width);
-  padding: 0 32px;
-  margin: auto;
-  z-index: 2;
-}
-
-#info-top .deco {
+.section > .container .deco {
   font-size: 12em;
   transform: translate(-50%, -20%);
   position: absolute;
@@ -194,4 +182,28 @@ body {
   /* color: gray; */
   z-index: -1;
   opacity: 0.4;
+}
+
+/* === Section Info === */
+
+#info-top > .container {
+  background-color: #cde;
+}
+
+#info-top > .container > .info-group {
+  position: relative;
+  max-width: var(--inner-width);
+  padding: 0 32px;
+  margin: auto;
+  z-index: 2;
+}
+
+/* === Section Point === */
+
+#point > .container > .info-group {
+  position: relative;
+  max-width: var(--inner-width);
+  padding: 0 32px;
+  margin: auto;
+  z-index: 2;
 }
