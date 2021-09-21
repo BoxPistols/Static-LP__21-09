@@ -1,227 +1,29 @@
-/*
- * @see: CSS整形オンラインツール
- * https://csscomb.herokuapp.com/online
-*/
-
 @import 'base';
 
-.title-area .design-title {
-	font-size: 8em;
-
-	position: absolute;
-	z-index: -1;
-	top: 5%;
-	left: 10%;
-
-	color: #fff2;
+.header {
+  background-color: var(--color-ghost);
+  position: sticky;
+  top: 0;
+  left: 0;
 }
-.title-area h2 {
-	z-index: 2;
-
-	display: block;
-
-	color: white;
+.header nav {
+  justify-content: space-between;
+  padding: 12px 30px;
 }
-.layout-catch {
-	animation-name: textFadeOn;
-	animation-duration: 1.2s;
 
-	opacity: 0;
-
-	animation-fill-mode: forwards;
-}
 .section {
-	position: relative;
+  position: relative;
 
-	background-color: #ccc;
+  background-color: #ccc;
 }
 .section__container {
-	position: relative;
-	z-index: 0;
+  position: relative;
+  z-index: 0;
 
-	max-width: 1440px;
-	/* min-height: 90vh; */
-	margin: auto;
-	padding: 20%;
-}
-.section p {
-	font-size: 1rem;
-
-	margin: 0;
-
-	letter-spacing: 1px;
-}
-.not-section__container {
-	position: relative;
-	z-index: 0;
-
-	max-width: 1440px;
-	min-height: 80vh;
-	margin: auto;
-	padding: 12%;
-}
-#second {
-	background: orange;
-}
-#third {
-	background: teal;
+  max-width: 1440px;
+  /* min-height: 90vh; */
+  margin: auto;
+  padding: 20%;
 }
 
-.obs .ob_target {
-	width: 100%;
-
-	opacity: 0;
-}
-.obs.fadeOn.active .ob_target {
-	animation-name: textFadeOn;
-	animation-duration: 1.2s;
-
-	animation-fill-mode: forwards;
-}
-.obs.fadeOff.active .ob_target {
-	animation-name: textFadeOff;
-	animation-duration: 1.2s;
-
-	animation-fill-mode: forwards;
-}
-.obs.r2l.active .ob_target {
-	animation-name: textFadeInR2L;
-	animation-duration: 1.2s;
-
-	animation-fill-mode: forwards;
-}
-.obs.r2l.active .ob_target.right {
-	display: flex;
-	flex-direction: column;
-
-	justify-content: flex-end;
-	align-items: end;
-}
-.obs.active .ob_target {
-	animation-name: textFadeIn;
-	animation-duration: 1.2s;
-
-	animation-fill-mode: forwards;
-}
-@keyframes textFadeIn {
-	0% {
-		transform: translateX(-50%);
-
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(0%);
-
-		opacity: 1;
-	}
-}
-@keyframes textFadeOn {
-	0% {
-		transform: translateY(-50%);
-
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0%);
-
-		opacity: 1;
-	}
-}
-@keyframes textFadeOff {
-	0% {
-		transform: translateY(50%);
-
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0%);
-
-		opacity: 1;
-	}
-}
-@keyframes textFadeInR2L {
-	0% {
-		transform: translateX(50%);
-
-		opacity: 0;
-	}
-	100% {
-		transform: translateX(0%);
-
-		opacity: 1;
-	}
-}
-button {
-	padding: 0.6em 2em;
-
-	border: 1px solid #222;
-	border-radius: 0.4em;
-	outline: none;
-	background: none;
-}
-/* h2,
-h3 {
-  margin: 1em 0;
-}
-h2 {
-  font-size: 4rem;
-  font-family: var(--font-heading);
-}
-h3 {
-  font-size: 3rem;
-} */
-#first.section {
-	background-color: #fff;
-	background-image: url(https://picsum.photos/1200/800/?image=309);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-#first.section h2 {
-	font-weight: 200;
-
-	text-align: center;
-}
-#first.section p {
-	color: black;
-}
-#first.section .guide {
-	font-size: 1rem;
-
-	text-align: left;
-}
-#first.section .layout-links {
-	display: flex;
-
-	width: 100%;
-
-	justify-content: space-around;
-}
-#first.section .layout-links button {
-	min-width: 12em;
-	margin: 2em 0.85em;
-}
-
-/* Scroll to Top（no animation） */
-.to-top {
-	position: fixed;
-	right: 2vw;
-	bottom: 2vh;
-
-	display: flex;
-
-	justify-content: center;
-	align-items: center;
-}
-.to-top a {
-	display: block;
-
-	width: 44px;
-	height: 44px;
-
-	text-decoration: none;
-
-	color: white;
-	border: 1px solid #999;
-	border-radius: 50%;
-	background: #fff2;
-}
+/* ---------------===== */

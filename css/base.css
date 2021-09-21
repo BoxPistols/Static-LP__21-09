@@ -1,59 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
-
 :root {
-	/* Color  global */
-	--primary: #0073df;
-	/* Color  text */
-	--color-text-h: #000;
-	--color-text-p: #555;
-	--color-text-p-secondary: #666;
-	--color-text-a: #1976d2;
-	--color-text-a-hover: #1976d2;
-	--color-text-a-visited: #504080;
-	/* Color  bg */
-	--color-bg: #fff;
-	--color-bg-code: #f0f0f0;
-	--color-bg-footer: #f9f9f9;
-	--color-bg-strong: #fff996;
-	--color-bg-btn: #1976d2;
-	/* Color  border */
-	--color-border: rgba(0, 0, 0, 0.1);
-	/* Font */
-	--font-sans: Helvetica Neue, Arial, Hiragino Sans, Hiragino Kaku Gothic ProN,
-		BIZ UDPGothic, Meiryo, sans-serif;
-	--font-heading: 'Comfortaa', cursive;
-	/* flex-box */
-	--flex: (justify-content: center);
+  /* Color  global */
+  --primary: #0073df;
+  /* Color  text */
+  --color-text-h: #000;
+  --color-text-p: #555;
+  --color-text-p-secondary: #666;
+  --color-text-a: #1976d2;
+  --color-text-a-hover: #1976d2;
+  --color-text-a-visited: #504080;
+  /* Color  bg */
+  --color-ghost: ghostwhite;
+  --color-bg: #fff;
+  --color-bg-code: #f0f0f0;
+  --color-bg-footer: #f9f9f9;
+  --color-bg-strong: #fff996;
+  --color-bg-btn: #1976d2;
+  /* Color  border */
+  --color-border: rgba(0, 0, 0, 0.1);
+  /* Font */
+  --font-sans: Helvetica Neue, Arial, Hiragino Sans, Hiragino Kaku Gothic ProN,
+    BIZ UDPGothic, Meiryo, sans-serif;
+  --font-heading: 'Comfortaa', cursive;
+  /* flex-box */
+  --flex: (justify-content: center);
 }
 
+/* ios */
+
 @supports (-webkit-touch-callout: none) and (font: -apple-system-body) {
-	:root {
-		font: -apple-system-body;
-	}
+  :root {
+    font: -apple-system-body;
+  }
 }
 
 /* style reset */
+
 * {
-	box-sizing: border-box;
-	margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	overflow-x: hidden;
-	font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
 }
 
 body {
-	font-family: var(--font-sans);
-	color: #111;
-	font-weight: 400;
-	font-size: 100%;
-	min-height: 100vh;
-	word-break: normal;
-	word-wrap: anywhere;
-	line-break: strict;
+  font-family: var(--font-sans);
+  color: #111;
+  font-weight: 400;
+  font-size: 100%;
+  min-height: 100vh;
+  word-break: normal;
+  word-wrap: anywhere;
+  line-break: strict;
 }
 
 body,
@@ -61,39 +64,40 @@ button,
 input,
 select,
 textarea {
-	font-synthesis: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
-	vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 a {
-	text-decoration: none;
-	-webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: initial;
 }
 
 ul {
-	padding: 0;
+  padding: 0;
 }
 
 ul li {
-	list-style: none;
+  list-style: none;
 }
 
 button {
-	-webkit-appearance: none;
-	border: none;
-	background: none;
-	box-sizing: initial;
-	color: inherit;
-	cursor: pointer;
-	font: inherit;
-	line-height: inherit;
-	overflow: visible;
-	vertical-align: inherit;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  box-sizing: initial;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  overflow: visible;
+  vertical-align: inherit;
 }
 
 h1,
@@ -102,25 +106,29 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-heading);
-	font-weight: 700;
-	color: var(--color-text-h);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text-h);
 }
 
 h1 {
-	font-size: 5em;
+  font-size: 5em;
 }
+
 h2 {
-	font-size: 4em;
+  font-size: 4em;
 }
+
 h3 {
-	font-size: 3em;
+  font-size: 3em;
 }
+
 h4 {
-	font-size: 2em;
+  font-size: 2em;
 }
+
 h5 {
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 h1 + *,
@@ -129,11 +137,57 @@ h3 + *,
 h4 + *,
 h5 + *,
 h6 + * {
-	margin-top: 0.8em;
+  margin-top: 0.8em;
 }
 
 nav ol,
 nav ul {
-	margin: 0;
-	list-style: none;
+  margin: 0;
+  list-style: none;
+}
+
+/* Animation */
+
+@keyframes textFadeIn {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeOn {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeOff {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeInR2L {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
