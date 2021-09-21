@@ -1,28 +1,51 @@
-/* Utility */
-.mx-auto {
-  margin: auto;
+/* Utility for HTML MarkUp */
+
+/* To Center */
+.m-auto {
+	margin: auto;
 }
-.flex,
-.fx {
-  display: flex;
+/* text-align */
+.tex-center {
+	text-align: center;
 }
-.flex-row {
-  flex-direction: row;
-}
-.flex-col {
-  flex-direction: column;
-}
-.flex-center {
-  align-items: center;
-  justify-content: center;
-}
-.flex-ai-center {
-  align-items: center;
-}
-.flex-jc-center {
-  justify-content: center;
+.tex-left {
+	text-align: left;
 }
 
-/* Responsive 
+/* Spacing */
+.mx-24 {
+	margin: 0 24px;
+}
+.my-24 {
+	margin: 24px 0;
+}
+
+/* flex-box */
+.flex,
+.fx {
+	display: flex;
+}
+.flex-row {
+	flex-direction: row;
+}
+.flex-col {
+	flex-direction: column;
+}
+/* 子要素の左右反転 */
+.flex-rev {
+	flex-direction: row-reverse;
+}
+.flex-center {
+	align-items: center;
+	justify-content: center;
+}
+.flex-ai-center {
+	align-items: center;
+}
+.flex-jc-center {
+	justify-content: center;
+}
+
+/* Responsive
  * @break-point 768px
  */

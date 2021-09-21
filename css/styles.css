@@ -1,163 +1,163 @@
-/* 
- * @see: CSS整形オンラインツール 
+/*
+ * @see: CSS整形オンラインツール
  * https://csscomb.herokuapp.com/online
 */
 
 @import 'base';
 
 .title-area .design-title {
-  font-size: 8em;
+	font-size: 8em;
 
-  position: absolute;
-  z-index: -1;
-  top: 5%;
-  left: 10%;
+	position: absolute;
+	z-index: -1;
+	top: 5%;
+	left: 10%;
 
-  color: #fff2;
+	color: #fff2;
 }
 .title-area h2 {
-  z-index: 2;
+	z-index: 2;
 
-  display: block;
+	display: block;
 
-  color: white;
+	color: white;
 }
 .layout-catch {
-  animation-name: textFadeOn;
-  animation-duration: 1.2s;
+	animation-name: textFadeOn;
+	animation-duration: 1.2s;
 
-  opacity: 0;
+	opacity: 0;
 
-  animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 .section {
-  position: relative;
+	position: relative;
 
-  background-color: #ccc;
+	background-color: #ccc;
 }
 .section__container {
-  position: relative;
-  z-index: 0;
+	position: relative;
+	z-index: 0;
 
-  max-width: 1440px;
-  /* min-height: 90vh; */
-  margin: auto;
-  padding: 20%;
+	max-width: 1440px;
+	/* min-height: 90vh; */
+	margin: auto;
+	padding: 20%;
 }
 .section p {
-  font-size: 1rem;
+	font-size: 1rem;
 
-  margin: 0;
+	margin: 0;
 
-  letter-spacing: 1px;
+	letter-spacing: 1px;
 }
 .not-section__container {
-  position: relative;
-  z-index: 0;
+	position: relative;
+	z-index: 0;
 
-  max-width: 1440px;
-  min-height: 80vh;
-  margin: auto;
-  padding: 12%;
+	max-width: 1440px;
+	min-height: 80vh;
+	margin: auto;
+	padding: 12%;
 }
 #second {
-  background: orange;
+	background: orange;
 }
 #third {
-  background: teal;
+	background: teal;
 }
 
 .obs .ob_target {
-  width: 100%;
+	width: 100%;
 
-  opacity: 0;
+	opacity: 0;
 }
 .obs.fadeOn.active .ob_target {
-  animation-name: textFadeOn;
-  animation-duration: 1.2s;
+	animation-name: textFadeOn;
+	animation-duration: 1.2s;
 
-  animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 .obs.fadeOff.active .ob_target {
-  animation-name: textFadeOff;
-  animation-duration: 1.2s;
+	animation-name: textFadeOff;
+	animation-duration: 1.2s;
 
-  animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 .obs.r2l.active .ob_target {
-  animation-name: textFadeInR2L;
-  animation-duration: 1.2s;
+	animation-name: textFadeInR2L;
+	animation-duration: 1.2s;
 
-  animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 .obs.r2l.active .ob_target.right {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  justify-content: flex-end;
-  align-items: end;
+	justify-content: flex-end;
+	align-items: end;
 }
 .obs.active .ob_target {
-  animation-name: textFadeIn;
-  animation-duration: 1.2s;
+	animation-name: textFadeIn;
+	animation-duration: 1.2s;
 
-  animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 @keyframes textFadeIn {
-  0% {
-    transform: translateX(-50%);
+	0% {
+		transform: translateX(-50%);
 
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
 
-    opacity: 1;
-  }
+		opacity: 1;
+	}
 }
 @keyframes textFadeOn {
-  0% {
-    transform: translateY(-50%);
+	0% {
+		transform: translateY(-50%);
 
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0%);
 
-    opacity: 1;
-  }
+		opacity: 1;
+	}
 }
 @keyframes textFadeOff {
-  0% {
-    transform: translateY(50%);
+	0% {
+		transform: translateY(50%);
 
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0%);
 
-    opacity: 1;
-  }
+		opacity: 1;
+	}
 }
 @keyframes textFadeInR2L {
-  0% {
-    transform: translateX(50%);
+	0% {
+		transform: translateX(50%);
 
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
 
-    opacity: 1;
-  }
+		opacity: 1;
+	}
 }
 button {
-  padding: 0.6em 2em;
+	padding: 0.6em 2em;
 
-  border: 1px solid #222;
-  border-radius: 0.4em;
-  outline: none;
-  background: none;
+	border: 1px solid #222;
+	border-radius: 0.4em;
+	outline: none;
+	background: none;
 }
 /* h2,
 h3 {
@@ -171,57 +171,57 @@ h3 {
   font-size: 3rem;
 } */
 #first.section {
-  background-color: #fff;
-  background-image: url(https://picsum.photos/1200/800/?image=309);
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-color: #fff;
+	background-image: url(https://picsum.photos/1200/800/?image=309);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 #first.section h2 {
-  font-weight: 200;
+	font-weight: 200;
 
-  text-align: center;
+	text-align: center;
 }
 #first.section p {
-  color: black;
+	color: black;
 }
 #first.section .guide {
-  font-size: 1rem;
+	font-size: 1rem;
 
-  text-align: left;
+	text-align: left;
 }
 #first.section .layout-links {
-  display: flex;
+	display: flex;
 
-  width: 100%;
+	width: 100%;
 
-  justify-content: space-around;
+	justify-content: space-around;
 }
 #first.section .layout-links button {
-  min-width: 12em;
-  margin: 2em 0.85em;
+	min-width: 12em;
+	margin: 2em 0.85em;
 }
 
 /* Scroll to Top（no animation） */
 .to-top {
-  position: fixed;
-  right: 2vw;
-  bottom: 2vh;
+	position: fixed;
+	right: 2vw;
+	bottom: 2vh;
 
-  display: flex;
+	display: flex;
 
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 .to-top a {
-  display: block;
+	display: block;
 
-  width: 44px;
-  height: 44px;
+	width: 44px;
+	height: 44px;
 
-  text-decoration: none;
+	text-decoration: none;
 
-  color: white;
-  border: 1px solid #999;
-  border-radius: 50%;
-  background: #fff2;
+	color: white;
+	border: 1px solid #999;
+	border-radius: 50%;
+	background: #fff2;
 }
