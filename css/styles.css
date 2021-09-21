@@ -2,11 +2,20 @@
 /* FIXME! rm */
 body {
   min-height: 200vh;
-  position: relative;
+  /* position: relative; */
+
+  /* Animation */
+  animation-name: fadeIn_opacity;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 /*** @snippet ***
 @color
   var(--color-ghost);
+
+  @width
+    var(--max-width);
+    var(--inner-width);
 
 @flex-box
     display: flex;
@@ -78,17 +87,16 @@ body {
   width: 100%;
 }
 .section > .container {
-  max-width: 1440px;
   margin: 0 auto;
   display: block;
   padding: 32px;
+  background-color: pink;
+  /* FIXME */
 }
+
 /* === Section Hero === */
 #hero.section {
   position: relative;
-  animation-name: fadeIn_opacity;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
 }
 
 /* 背景画像 */
@@ -112,8 +120,8 @@ body {
 
 #hero.section > .container {
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(0.5px) contrast(0.8) grayscale(0.4);
+  background-color: transparent;
+  backdrop-filter: blur(0.5px) grayscale(0.4);
 }
 
 #hero > .container > .catch-group {
@@ -121,29 +129,60 @@ body {
   min-height: 50vh;
   padding-top: 90px;
   color: var(--color-ghost);
+  /* Animation */
+  animation-name: fadeIn_Top;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
-
+#hero > .container > .catch-group > h2 {
+  font-size: 5rem;
+}
 #hero > .container .text-catch {
+  opacity: 0;
+  /* Animation */
+  animation-name: fadeIn_Left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+
   margin: 2em auto 0;
-  line-height: 2;
-  max-width: 600px;
+  max-width: var(--inner-width);
+  line-height: 1.5;
+  font-size: 1.5rem;
 }
 #hero > .container .button-links button {
   margin: 4rem 0.85em;
 }
 
-/* #hero > .container > .guide {
-  font-size: 1rem;
-  text-align: left;
-}
-#first.section .layout-links {
-  display: flex;
+/* === Section Info === */
 
-  width: 100%;
-
-  justify-content: space-around;
+#info-top > .container {
+  /* background-color: bisque; */
+  background-color: #d7fbff;
+  padding: 64px 0 80px;
+  z-index: 1;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
-#first.section .layout-links button {
-  min-width: 12em;
-  margin: 2em 0.85em;
-} */
+
+#info-top > .container > .info-group {
+  position: relative;
+  max-width: var(--inner-width);
+  padding: 0 32px;
+  margin: auto;
+  z-index: 2;
+}
+
+#info-top .deco {
+  font-size: 12em;
+  transform: translate(-50%, -20%);
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  white-space: nowrap;
+  color: var(--color-ghost);
+  /* color: gray; */
+  z-index: -1;
+  opacity: 0.9;
+}
