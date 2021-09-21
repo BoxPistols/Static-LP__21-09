@@ -2,6 +2,9 @@
  * @see: CSS整形オンラインツール 
  * https://csscomb.herokuapp.com/online
 */
+
+@import 'base';
+
 .title-area .design-title {
   font-size: 8em;
 
@@ -37,7 +40,7 @@
   z-index: 0;
 
   max-width: 1440px;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   margin: auto;
   padding: 20%;
 }
@@ -63,6 +66,7 @@
 #third {
   background: teal;
 }
+
 .obs .ob_target {
   width: 100%;
 
@@ -155,18 +159,17 @@ button {
   outline: none;
   background: none;
 }
-h2,
+/* h2,
 h3 {
-  font-weight: 200;
-
   margin: 1em 0;
 }
 h2 {
   font-size: 4rem;
+  font-family: var(--font-heading);
 }
 h3 {
   font-size: 3rem;
-}
+} */
 #first.section {
   background-color: #fff;
   background-image: url(https://picsum.photos/1200/800/?image=309);
