@@ -29,10 +29,12 @@ body {
   align-items: center;
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.1);
-  font-family: var(--font-heading);
+  color: rgba(0, 0, 0, 0.7);
+  font-family: var(--font-design);
+  font-weight: 700;
   font-size: 12px;
 }
 
@@ -45,6 +47,8 @@ body {
   left: 0;
   z-index: 2;
   border: solid 4px rgba(#000, 0.2);
+  color: var(--color-ghost);
+  font-family: var(--font-design);
 }
 
 .header:before {
@@ -54,8 +58,7 @@ body {
   height: 100%;
   z-index: -1;
   background-color: var(--color-ghost);
-  opacity: 0.5;
-  backdrop-filter: blur(1.25px);
+  opacity: 0.1;
 }
 
 .header > nav {
@@ -65,8 +68,9 @@ body {
 .header > nav ul {
   display: flex;
 }
-.header > nav ul > li {
+.header > nav ul > li a {
   margin: 0 0 0 0.8rem;
+  color: var(--color-ghost);
 }
 
 /* ===  Section Global === */
@@ -82,8 +86,8 @@ body {
 /* === Section Hero === */
 #hero.section {
   position: relative;
-  animation-name: textFadeOn;
-  animation-duration: 1.2s;
+  animation-name: fadeIn_opacity;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -114,10 +118,16 @@ body {
 
 #hero > .container > .catch-group {
   text-align: center;
-  min-height: 70vh;
+  min-height: 50vh;
+  padding-top: 90px;
   color: var(--color-ghost);
 }
 
+#hero > .container .text-catch {
+  margin: 2em auto 0;
+  line-height: 2;
+  max-width: 600px;
+}
 #hero > .container .button-links button {
   margin: 4rem 0.85em;
 }
