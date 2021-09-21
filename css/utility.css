@@ -2,7 +2,8 @@
 .mx-auto {
   margin: auto;
 }
-.flex {
+.flex,
+.fx {
   display: flex;
 }
 .flex-row {
