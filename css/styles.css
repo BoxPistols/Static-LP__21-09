@@ -1,4 +1,3 @@
-/* @import 'base'; */
 /* FIXME! rm */
 body {
   min-height: 200vh;
@@ -6,14 +5,14 @@ body {
 
   /* Animation */
   animation-name: fadeIn_opacity;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 /*** @snippet ***
 @color
   var(--color-ghost);
 
-  @width
+@width
     var(--max-width);
     var(--inner-width);
 
@@ -23,6 +22,9 @@ body {
     align-items: center;
     justify-content: space-between;
     justify-content: space-around;
+
+@text design
+  text-shadow: var(--text-shadow);
 
 ***/
 
@@ -131,28 +133,31 @@ body {
   min-height: 50vh;
   padding-top: 90px;
   color: var(--color-ghost);
-  /* Animation */
-  animation-name: fadeIn_Top;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+  text-shadow: var(--text-shadow);
 }
 #hero > .container > .catch-group > h2 {
+  /* Animation */
+  animation-name: fadeIn_Top;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+
   font-size: 5rem;
 }
 #hero > .container .text-catch {
   opacity: 0;
+
   /* Animation */
   animation-name: fadeIn_Left;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 
   margin: 2em auto 0;
   max-width: var(--inner-width);
   line-height: 1.5;
   font-size: 1.5rem;
-  text-shadow: 0px 0px 2px #000;
 }
+
 #hero > .container .button-links button {
   margin: 4rem 0.85em;
 }
@@ -161,7 +166,7 @@ body {
 
 #info-top > .container {
   /* background-color: bisque; */
-  background-color: #d7fbff;
+  background-color: #cde;
   padding: 64px 0 80px;
   z-index: 1;
   /* display: flex; */
@@ -187,5 +192,5 @@ body {
   color: var(--color-ghost);
   /* color: gray; */
   z-index: -1;
-  opacity: 0.9;
+  opacity: 0.4;
 }
