@@ -60,6 +60,7 @@ body {
   z-index: 2;
   border: solid 4px rgba(#000, 0.5);
   /* color: var(--color-ghost); */
+  text-shadow: var(--text-shadow);
   font-family: var(--font-design);
   backdrop-filter: blur(2px);
 }
