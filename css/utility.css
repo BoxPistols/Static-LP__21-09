@@ -2,50 +2,51 @@
 
 /* To Center */
 .m-auto {
-	margin: auto;
+  margin: auto;
 }
 /* text-align */
 .tex-center {
-	text-align: center;
+  text-align: center;
 }
 .tex-left {
-	text-align: left;
+  text-align: left;
 }
 
 /* Spacing */
 .mx-24 {
-	margin: 0 24px;
+  margin: 0 24px;
 }
 .my-24 {
-	margin: 24px 0;
+  margin: 24px 0;
 }
 
 /* flex-box */
-.flex,
-.fx {
-	display: flex;
+.flex {
+  display: flex;
 }
 .flex-row {
-	flex-direction: row;
+  flex-direction: row;
 }
-.flex-col {
-	flex-direction: column;
+.flex-column {
+  flex-direction: column;
 }
 /* 子要素の左右反転 */
 .flex-rev {
-	flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .flex-center {
-	align-items: center;
-	justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .flex-ai-center {
-	align-items: center;
+  align-items: center;
 }
 .flex-jc-center {
-	justify-content: center;
+  justify-content: center;
 }
 
-/* Responsive
+/* UI Components */
+
+/* TODO: Responsive
  * @break-point 768px
  */

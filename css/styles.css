@@ -1,29 +1,139 @@
 @import 'base';
+/* FIXME! rm */
+body {
+  min-height: 200vh;
+  position: relative;
+}
+/*** @snippet ***
+@color
+  var(--color-ghost);
 
+@flex-box
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+
+***/
+
+/* === Scroll to Top（no animation） === */
+.to-top {
+  position: fixed;
+  right: 2vw;
+  bottom: 2vh;
+}
+.to-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  font-family: var(--font-heading);
+  font-size: 12px;
+}
+
+/* === Header & Nav === */
 .header {
-  background-color: var(--color-ghost);
-  position: sticky;
+  /* background-color: var(--color-ghost); */
+  position: fixed;
+  width: 100vw;
   top: 0;
   left: 0;
+  z-index: 2;
+  border: solid 4px rgba(#000, 0.2);
 }
-.header nav {
+
+.header:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--color-ghost);
+  opacity: 0.5;
+  backdrop-filter: blur(1.25px);
+}
+
+.header > nav {
   justify-content: space-between;
   padding: 12px 30px;
 }
+.header > nav ul {
+  display: flex;
+}
+.header > nav ul > li {
+  margin: 0 0 0 0.8rem;
+}
 
+/* ===  Section Global === */
 .section {
-  position: relative;
-
-  background-color: #ccc;
+  width: 100%;
 }
-.section__container {
-  position: relative;
-  z-index: 0;
-
+.section > .container {
   max-width: 1440px;
-  /* min-height: 90vh; */
-  margin: auto;
-  padding: 20%;
+  margin: 0 auto;
+  display: block;
+  padding: 32px;
+}
+/* === Section Hero === */
+#hero.section {
+  position: relative;
+  animation-name: textFadeOn;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
 }
 
-/* ---------------===== */
+/* 背景画像 */
+#hero.section > .over {
+  /* content: ''; */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(https://picsum.photos/1200/800/?image=309); */
+  background-image: url(https://shrtm.nu/pFQj);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  /* filter: blur(2px); */
+  z-index: -1;
+}
+
+#hero.section > .container {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.5px) contrast(0.8) grayscale(0.4);
+}
+
+#hero > .container > .catch-group {
+  text-align: center;
+  min-height: 70vh;
+  color: var(--color-ghost);
+}
+
+#hero > .container .button-links button {
+  margin: 4rem 0.85em;
+}
+
+/* #hero > .container > .guide {
+  font-size: 1rem;
+  text-align: left;
+}
+#first.section .layout-links {
+  display: flex;
+
+  width: 100%;
+
+  justify-content: space-around;
+}
+#first.section .layout-links button {
+  min-width: 12em;
+  margin: 2em 0.85em;
+} */
