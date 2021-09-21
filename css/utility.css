@@ -1,5 +1,20 @@
 /* Utility for HTML MarkUp */
 
+/* Font Styles */
+.title-mincho {
+  font-family: var(--font-mincho);
+  font-weight: 400;
+}
+
+.title-design {
+  font-family: var(--font-design);
+  font-weight: 700;
+}
+.text-design {
+  font-family: var(--font-design);
+  font-weight: 300;
+}
+
 /* To Center */
 .m-auto {
   margin: auto;

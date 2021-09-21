@@ -184,6 +184,28 @@ body {
   opacity: 0.4;
 }
 
+/* Grid Items */
+.section > .container .grid-contents > h3 {
+  display: flex;
+  align-items: center;
+}
+.section > .container .grid-contents .grid-image {
+  margin: 0 32px;
+}
+
+/* Step Accent */
+.section > .container .step-num {
+  font-size: 1.5rem;
+  border: 1px solid #000;
+  border-radius: 48px;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* === Section Info === */
 
 #info-top > .container {

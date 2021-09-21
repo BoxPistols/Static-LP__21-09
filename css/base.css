@@ -88,6 +88,12 @@ a {
   color: initial;
 }
 
+p {
+  line-height: 1.8;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
 ul {
   padding: 0;
 }
@@ -116,20 +122,6 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-}
-
-.title-mincho {
-  font-family: var(--font-mincho);
-  font-weight: 400;
-}
-
-.title-design {
-  font-family: var(--font-design);
-  font-weight: 700;
-}
-.text-design {
-  font-family: var(--font-design);
-  font-weight: 300;
 }
 
 h1 {
